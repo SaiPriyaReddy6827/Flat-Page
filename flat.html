@@ -2,16 +2,24 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <title>Sunrise Avenue</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!-- Bootstrap CSS and JS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <div id="section1">
-        <div class="  bg d-flex flex-column justify-content-end">
-
+    <!-- Section 1 -->
+    <div id="section1" style="display: block;">
+        <div class="bg d-flex flex-column justify-content-end">
             <div class="bg2">
                 <h1 class="hae">Sunrise Avenue</h1>
                 <p class="para">Move to what moves you.</p>
@@ -19,45 +27,55 @@
             </div>
         </div>
     </div>
-    <div id="section2">
+
+    <!-- Section 2 -->
+    <div id="section2" style="display: none;">
         <div class="bg3">
-            <h1 class="hae">Sunrise Avenue</h1>
+            <h1 class="hae text-center">Sunrise Avenue</h1>
+            <div class="d-flex flex-row ge" onclick="display('section4')">
+                <img src="https://assets.ccbp.in/frontend/static-website/flats-list-card2-img.png" class="flat" />
+                <div>
+                    <h1 class="hea2">2BHK Flat</h1>
+                    <p class="para2">A minimalist house made for modern day families. It is fully furnished with trending furniture. Its built-up area is 1200 sq.ft.</p>
+                </div>
+            </div>
+            
+            
             <div class="d-flex flex-row ge" onclick="display('section3')">
                 <img src="https://assets.ccbp.in/frontend/static-website/flats-list-card1-img.png" class="flat" />
                 <div>
                     <h1 class="hea2">3BHK Flat</h1>
-                    <p class="para2">This is a fully furnished house with handmade furniture including a luxury en-suite facilities pack.Its build-up area is about 1600sq.ft.</p>
+                    <p class="para2">This is a fully furnished house with handmade furniture including a luxury en-suite facilities pack. Its build-up area is about 1600 sq.ft.</p>
                 </div>
             </div>
-            <div class="d-flex flex-row ge " onclick="display('section3')">
-                <img src="https://assets.ccbp.in/frontend/static-website/flats-list-card2-img.png" class="flat" />
-                <div>
-                    <h1 class="hea2">2BHK Flat</h1>
-                    <p class="para2">A minimalist house made for modern day families.It is fully furnished with trending furniture.Its builds-up area is 1200sq.ft.</p>
-                </div>
-            </div>
+
+            
+
             <div class="d-flex flex-row ge" onclick="display('section5')">
                 <img src="https://assets.ccbp.in/frontend/static-website/flats-list-card3-img.png" class="flat" />
                 <div>
                     <h1 class="hea2">4BHK Flat</h1>
-                    <p class="para2">A Contemporary home with more color and vibrancy.It is fully furnished with elegant furniture with elegant furniture.Its built-up area is about 3600sq.ft.</p>
+                    <p class="para2">A contemporary home with more color and vibrancy. It is fully furnished with elegant furniture. Its built-up area is about 3600 sq.ft.</p>
                 </div>
             </div>
+
             <button class="button" onclick="display('section1')">Back</button>
         </div>
     </div>
-    <div id="section3">
+
+    <!-- Section 3 (3BHK Details) -->
+    <div id="section3" style="display: none;">
         <div class="d-flex flex-column justify-content-end">
-            <img src="https://assets.ccbp.in/frontend/static-website/flats-list-d1-img.png" />
+            <img src="https://assets.ccbp.in/frontend/static-website/flats-list-d1-img.png" class="w-100" />
             <div class="bg6">
                 <h1 class="hae">Rs.3000/-</h1>
                 <div class="d-flex flex-row">
                     <img src="https://assets.ccbp.in/frontend/static-website/flats-list-location-icon-img.png" class="image" />
-                    <p class="para3">D/N 5-2,Food Street,Indore</p>
+                    <p class="para3">D/N 5-2, Food Street, Indore</p>
                 </div>
                 <hr />
                 <h1 class="hae">Description</h1>
-                <p class="para3">This is a fully furnished house with handmade furniture including a luxury en-suite facilities pack.Its build-up area is about 1600sq.ft.A spacious home for you to live in.</p>
+                <p class="para3">This is a fully furnished house with handmade furniture including a luxury en-suite facilities pack. Its build-up area is about 1600 sq.ft. A spacious home for you to live in.</p>
                 <div class="d-flex flex-row">
                     <button class="button" onclick="display('section1')">Confirm</button>
                     <button class="button" onclick="display('section2')">Back</button>
@@ -65,18 +83,20 @@
             </div>
         </div>
     </div>
-    <div id="section4">
+
+    <!-- Section 4 (2BHK Details) -->
+    <div id="section4" style="display: none;">
         <div class="d-flex flex-column justify-content-end">
-            <img src="https://assets.ccbp.in/frontend/static-website/flats-list-d2-img.png" />
+            <img src="https://assets.ccbp.in/frontend/static-website/flats-list-d2-img.png" class="w-100" />
             <div class="bg6">
                 <h1 class="hae">Rs.2000/-</h1>
                 <div class="d-flex flex-row">
                     <img src="https://assets.ccbp.in/frontend/static-website/flats-list-location-icon-img.png" class="image" />
-                    <p class="para3">D/N 6-2,Food Street,Indore</p>
+                    <p class="para3">D/N 6-2, Food Street, Indore</p>
                 </div>
                 <hr />
                 <h1 class="hae">Description</h1>
-                <p class="para3">A minimalist house made for modern day families.It is fully furnished with trending furniture.Its builds-up area is 1200sq.ft.</p>
+                <p class="para3">A minimalist house made for modern day families. It is fully furnished with trending furniture. Its built-up area is 1200 sq.ft.</p>
                 <div class="d-flex flex-row">
                     <button class="button" onclick="display('section1')">Confirm</button>
                     <button class="button" onclick="display('section2')">Back</button>
@@ -84,18 +104,20 @@
             </div>
         </div>
     </div>
-    <div id="section5">
+
+    <!-- Section 5 (4BHK Details) -->
+    <div id="section5" style="display: none;">
         <div class="d-flex flex-column justify-content-end">
-            <img src="https://assets.ccbp.in/frontend/static-website/flats-list-d3-img.png" />
+            <img src="https://assets.ccbp.in/frontend/static-website/flats-list-d3-img.png" class="w-100" />
             <div class="bg6">
                 <h1 class="hae">Rs.4000/-</h1>
                 <div class="d-flex flex-row">
                     <img src="https://assets.ccbp.in/frontend/static-website/flats-list-location-icon-img.png" class="image" />
-                    <p class="para3">D/N 5-2,Food Street,Indore</p>
+                    <p class="para3">D/N 7-2, Food Street, Indore</p>
                 </div>
                 <hr />
                 <h1 class="hae">Description</h1>
-                <p class="para3">A Contemporary home with more color and vibrancy.It is fully furnished with elegant furniture with elegant furniture.Its built-up area is about 3600sq.ft.</p>
+                <p class="para3">A contemporary home with more color and vibrancy. It is fully furnished with elegant furniture. Its built-up area is about 3600 sq.ft.</p>
                 <div class="d-flex flex-row">
                     <button class="button" onclick="display('section1')">Confirm</button>
                     <button class="button" onclick="display('section2')">Back</button>
@@ -103,7 +125,16 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+
+    <!-- Optional Fallback for display() if not defined -->
+    <script>
+        function display(sectionId) {
+            const sections = ['section1', 'section2', 'section3', 'section4', 'section5'];
+            sections.forEach(id => {
+                document.getElementById(id).style.display = (id === sectionId) ? 'block' : 'none';
+            });
+        }
+    </script>
 </body>
 
 </html>
