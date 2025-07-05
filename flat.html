@@ -1,24 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <title>Sunrise Avenue</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
-    <!-- Bootstrap CSS and JS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <!-- Custom Styles -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
     <!-- Section 1 -->
-    <div id="section1" style="display: block;">
+    <div id="section1" class="section active">
         <div class="bg d-flex flex-column justify-content-end">
             <div class="bg2">
                 <h1 class="hae">Sunrise Avenue</h1>
@@ -29,9 +26,10 @@
     </div>
 
     <!-- Section 2 -->
-    <div id="section2" style="display: none;">
+    <div id="section2" class="section">
         <div class="bg3">
             <h1 class="hae text-center">Sunrise Avenue</h1>
+
             <div class="d-flex flex-row ge" onclick="display('section4')">
                 <img src="https://assets.ccbp.in/frontend/static-website/flats-list-card2-img.png" class="flat" />
                 <div>
@@ -39,8 +37,7 @@
                     <p class="para2">A minimalist house made for modern day families. It is fully furnished with trending furniture. Its built-up area is 1200 sq.ft.</p>
                 </div>
             </div>
-            
-            
+
             <div class="d-flex flex-row ge" onclick="display('section3')">
                 <img src="https://assets.ccbp.in/frontend/static-website/flats-list-card1-img.png" class="flat" />
                 <div>
@@ -48,8 +45,6 @@
                     <p class="para2">This is a fully furnished house with handmade furniture including a luxury en-suite facilities pack. Its build-up area is about 1600 sq.ft.</p>
                 </div>
             </div>
-
-            
 
             <div class="d-flex flex-row ge" onclick="display('section5')">
                 <img src="https://assets.ccbp.in/frontend/static-website/flats-list-card3-img.png" class="flat" />
@@ -63,8 +58,8 @@
         </div>
     </div>
 
-    <!-- Section 3 (3BHK Details) -->
-    <div id="section3" style="display: none;">
+    <!-- Section 3 - 3BHK -->
+    <div id="section3" class="section">
         <div class="d-flex flex-column justify-content-end">
             <img src="https://assets.ccbp.in/frontend/static-website/flats-list-d1-img.png" class="w-100" />
             <div class="bg6">
@@ -84,8 +79,8 @@
         </div>
     </div>
 
-    <!-- Section 4 (2BHK Details) -->
-    <div id="section4" style="display: none;">
+    <!-- Section 4 - 2BHK -->
+    <div id="section4" class="section">
         <div class="d-flex flex-column justify-content-end">
             <img src="https://assets.ccbp.in/frontend/static-website/flats-list-d2-img.png" class="w-100" />
             <div class="bg6">
@@ -105,8 +100,8 @@
         </div>
     </div>
 
-    <!-- Section 5 (4BHK Details) -->
-    <div id="section5" style="display: none;">
+    <!-- Section 5 - 4BHK -->
+    <div id="section5" class="section">
         <div class="d-flex flex-column justify-content-end">
             <img src="https://assets.ccbp.in/frontend/static-website/flats-list-d3-img.png" class="w-100" />
             <div class="bg6">
@@ -126,13 +121,14 @@
         </div>
     </div>
 
-    <!-- Optional Fallback for display() if not defined -->
+    <!-- JS to toggle sections -->
     <script>
         function display(sectionId) {
             const sections = ['section1', 'section2', 'section3', 'section4', 'section5'];
             sections.forEach(id => {
                 document.getElementById(id).style.display = (id === sectionId) ? 'block' : 'none';
             });
+            window.scrollTo(0, 0); // ensure no scroll carry-over
         }
     </script>
 </body>
