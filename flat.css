@@ -5,6 +5,17 @@ body {
     font-family: 'Bree Serif', serif;
 }
 
+/* Each section fills the full screen */
+.section {
+    height: 100vh;
+    overflow-y: auto;
+    display: none;
+}
+.section.active {
+    display: block;
+}
+
+/* Background for the landing */
 .bg {
     background-image: url("https://assets.ccbp.in/frontend/static-website/flats-list-bg.png");
     background-size: cover;
@@ -41,8 +52,9 @@ body {
 
 .bg3 {
     background-color: #222222;
-    min-height: 100vh;
+    height: 100vh;
     padding: 20px;
+    overflow-y: auto;
 }
 
 .flat {
@@ -82,5 +94,5 @@ body {
 
 .para3 {
     color: #ffffff;
-    font-size: 14px;
+    font-size: 14px;
 }
